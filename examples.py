@@ -26,8 +26,6 @@ if __name__ == "__main__":
         sta = Stats(c_id)
         proc = Process(c_id, ps_args = "aux")
 
-
-
         # Container name
         print ("\n#Container name")
         print ins.name()
@@ -46,6 +44,20 @@ if __name__ == "__main__":
         print ("\n#Memory usage %")
         print  int(mem_u)*100/int(mem_l)
 
+        # CPU stats
+
+        # CPU Delta
+        cpu_delta = int(sta.cpu_stats_total_usage()) - int(sta.precpu_total_usage())
+
+        # systemDelta
+        system_delta = int(sta.cpu_stats_system_cpu_usage()) - int(sta.precpu_system_cpu_usage())
+
+        # number of cores
+        usage_per_core = sta.cpu_stats_percpu_usage().strip('[]')
+        number_of_cores = len(usage_per_core.split(','))
+
+        print ("\n#CPU percentage")
+        print number_of_cores * ((cpu_delta/system_delta)*100)
 
         # The number of times that a process of the cgroup triggered a "major fault"
         print ("\n#The number of times that a process of the cgroup triggered a major fault")
