@@ -730,8 +730,8 @@ class Stats():
         return ('{}'.format( respj["cpu_stats"]["throttling_data"]["throttled_time"] ) )
 
 
-    # Per CPU
-    def percpu_stats(self):
+    # Previous CPU
+    def precpu_stats(self):
         resp = self.resp
         url = self.url
         resp_status_code = resp.status_code
@@ -742,7 +742,7 @@ class Stats():
         respj = self.resp.json()
         return ('{}'.format( respj["precpu_stats"] ) )
 
-    def percpu_usage_in_usermode(self):
+    def precpu_usage_in_usermode(self):
         resp = self.resp
         url = self.url
         resp_status_code = resp.status_code
@@ -751,9 +751,9 @@ class Stats():
           
 
         respj = self.resp.json()
-        return ('{}'.format( respj["percpu_stats"]["cpu_usage"]["usage_in_usermode"] ) )
+        return ('{}'.format( respj["precpu_stats"]["cpu_usage"]["usage_in_usermode"] ) )
 
-    def percpu_total_usage(self):
+    def precpu_total_usage(self):
         resp = self.resp
         url = self.url
         resp_status_code = resp.status_code
@@ -762,9 +762,9 @@ class Stats():
           
 
         respj = self.resp.json()
-        return ('{}'.format( respj["percpu_stats"]["cpu_usage"]["total_usage"] ) )
+        return ('{}'.format( respj["precpu_stats"]["cpu_usage"]["total_usage"] ) )
 
-    def percpu_percpu_usage(self):
+    def precpu_percpu_usage(self):
         resp = self.resp
         url = self.url
         resp_status_code = resp.status_code
@@ -773,9 +773,9 @@ class Stats():
           
 
         respj = self.resp.json()
-        return ('{}'.format( respj["percpu_stats"]["cpu_usage"]["percpu_usage"] ) )
+        return ('{}'.format( respj["precpu_stats"]["cpu_usage"]["percpu_usage"] ) )
 
-    def percpu_usage_in_kernelmode(self):
+    def precpu_usage_in_kernelmode(self):
         resp = self.resp
         url = self.url
         resp_status_code = resp.status_code
@@ -784,9 +784,9 @@ class Stats():
           
 
         respj = self.resp.json()
-        return ('{}'.format( respj["percpu_stats"]["cpu_usage"]["usage_in_kernelmode"] ) )
+        return ('{}'.format( respj["precpu_stats"]["cpu_usage"]["usage_in_kernelmode"] ) )
 
-    def percpu_system_cpu_usage(self):
+    def precpu_system_cpu_usage(self):
         resp = self.resp
         url = self.url
         resp_status_code = resp.status_code
@@ -795,9 +795,9 @@ class Stats():
           
 
         respj = self.resp.json()
-        return ('{}'.format( respj["percpu_stats"]["system_cpu_usage"] ) )
+        return ('{}'.format( respj["precpu_stats"]["system_cpu_usage"] ) )
 
-    def percpu_throttling_data(self):
+    def precpu_throttling_data(self):
         resp = self.resp
         url = self.url
         resp_status_code = resp.status_code
@@ -806,9 +806,9 @@ class Stats():
           
 
         respj = self.resp.json()
-        return ('{}'.format( respj["percpu_stats"]["throttling_data"] ) )
+        return ('{}'.format( respj["precpu_stats"]["throttling_data"] ) )
 
-    def percpu_period(self):
+    def precpu_period(self):
         resp = self.resp
         url = self.url
         resp_status_code = resp.status_code
@@ -817,9 +817,9 @@ class Stats():
           
 
         respj = self.resp.json()
-        return ('{}'.format( respj["percpu_stats"]["throttling_data"]["periods"] ) )
+        return ('{}'.format( respj["precpu_stats"]["throttling_data"]["periods"] ) )
 
-    def percpu_throttled_periods(self):
+    def precpu_throttled_periods(self):
         resp = self.resp
         url = self.url
         resp_status_code = resp.status_code
@@ -828,9 +828,9 @@ class Stats():
           
 
         respj = self.resp.json()
-        return ('{}'.format( respj["percpu_stats"]["throttling_data"]["throttled_periods"] ) )
+        return ('{}'.format( respj["precpu_stats"]["throttling_data"]["throttled_periods"] ) )
 
-    def percpu_throttled_time(self):
+    def precpu_throttled_time(self):
         resp = self.resp
         url = self.url
         resp_status_code = resp.status_code
@@ -839,6 +839,6 @@ class Stats():
           
 
         respj = self.resp.json()
-        return ('{}'.format( respj["percpu_stats"]["throttling_data"]["throttled_time"] ) )
+        return ('{}'.format( respj["precpu_stats"]["throttling_data"]["throttled_time"] ) )
 
 
