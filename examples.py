@@ -9,10 +9,6 @@ from domonit.process import Process
 from domonit.changes import Changes
 from domonit.stats import Stats
 
-
-import json
-
-
 c = Containers()
 i = Ids()
 
@@ -28,8 +24,9 @@ if __name__ == "__main__":
 
         # Container name
         print ("\n#Container name")
-        print ins.name()
- 
+        #print ins.name()
+        print c.names(c_id)
+
         # Container id
         print ("\n#Container id")
         print ins.id()
@@ -61,8 +58,8 @@ if __name__ == "__main__":
 
         # The number of times that a process of the cgroup triggered a "major fault"
         print ("\n#The number of times that a process of the cgroup triggered a major fault")
-        print sta.memory_stats_stats_pgmajfault()
-  
+        print sta.memory_stats_stats_fault()
+
 
         # Same output as ps aux in *nix
         print("\n#Same output as ps aux in *nix")
