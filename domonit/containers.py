@@ -33,13 +33,17 @@ class Containers():
     def names(self, c_id):
         resp = self.resp
         url = self.url
+        names = {}
 
         resp_status_code = resp.status_code
         u.check_resp(resp_status_code, url)       
         for item in resp.json():
-            return('[{}]'.format(item["Names"]))
+            if c_id == '{}'.format(item["Id"]):
+                names[c_id] = ('[{}]'.format(item["Names"]))
+                return names
+        return
 
-    def status(self, c_id):
+    def status(self):
         resp = self.resp
         url = self.url
 
@@ -110,7 +114,7 @@ class Containers():
         resp_status_code = resp.status_code
         u.check_resp(resp_status_code, url)       
         for item in resp.json():
-            return('{}'.format(item["ImageId"]))
+            return('{}'.format(item["ImageID"]))
 
     def command(self, c_id):
         resp = self.resp
