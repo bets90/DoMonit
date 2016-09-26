@@ -53,6 +53,7 @@ git clone https://github.com/eon01/DoMonit.git
 . bin/activate
 cd DoMonit
 pip install -r requirements.txt
+(sudo) pip install .
 #To Test:
 python examples.py
 ```
